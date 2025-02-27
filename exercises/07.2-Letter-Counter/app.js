@@ -2,5 +2,14 @@ let par = "Lorem ipsum dolor sit amet consectetur adipiscing elit Curabitur eget
 let counts = {};
 
 // Your code here
+for (let i = 0; i < par.length; i++) {
+  if (par[i].toLowerCase() in counts) {
+    counts[par[i].toLowerCase()] += 1;
+  } else if (par[i].toLowerCase() == " ") {
+    continue;
+  } else {
+    counts[par[i].toLowerCase()] = 1;
+  }
+}
 
 console.log(counts);
