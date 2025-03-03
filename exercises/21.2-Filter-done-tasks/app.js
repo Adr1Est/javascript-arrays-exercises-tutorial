@@ -10,3 +10,8 @@ let tasks = [
 ];
 
 // Your code here
+let hecho = tasks.filter((item) => {
+  return (item.done === true);
+});
+
+console.log(hecho);
